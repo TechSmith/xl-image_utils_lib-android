@@ -2,4 +2,13 @@
 */gen/*
 *.class
 */local.properties
-xl_image_utils_lib/build
+
+**/build
+.idea/
+.gradle
+**/build
+*.iml
+*.iws
+*.ipr
+*.swp
+*~
