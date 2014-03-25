@@ -398,8 +398,8 @@ public class ImageLoader implements AbstractImageLoader {
 	 * NOTE: The images in the memcache will not be garbage collected if the app still has references to the bitmaps. For example, if the bitmap is loaded to an {@link ImageView} and the ImageView is still being
 	 * referenced.
 	 */
-	public void clearMemCache() {
-		ImageCacher.getInstance(mContext).clearMemCache();
+	public static void clearMemCache(Context context) {
+		ImageCacher.getInstance(context).clearMemCache();
 	}
 
 	/**
