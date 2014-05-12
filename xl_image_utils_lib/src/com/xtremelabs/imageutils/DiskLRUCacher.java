@@ -106,7 +106,10 @@ class DiskLRUCacher implements ImageDiskCacherInterface {
 				} catch (FileFormatException e) {
 					failed = true;
 					errorMessage = "FileFormatException -- Disk decode failed with error message: " + e.getMessage();
-				}
+				} catch ( OutOfMemoryError e ) {
+               failed = true;
+               errorMessage = "OutOfMemoryError -- Disk decode failed with error message: " + e.getMessage();
+            }
 
 				if (!failed) {
 					mImageDiskObserver.onImageDecoded(decodeSignature, bitmap, imageReturnedFrom);
